@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class addproduct extends StatefulWidget {
-  const addproduct({super.key});
+class updateproduct extends StatefulWidget {
+  const updateproduct({super.key});
 
   @override
-  State<addproduct> createState() => _addproductState();
+  State<updateproduct> createState() => _addproductState();
 }
 
-class _addproductState extends State<addproduct> {
+class _addproductState extends State<updateproduct> {
   final TextEditingController _PNcontrolar = TextEditingController();
   final TextEditingController _UPcontrolar = TextEditingController();
   final TextEditingController _Qcontrolar = TextEditingController();
@@ -21,7 +21,7 @@ class _addproductState extends State<addproduct> {
         appBar: AppBar(
           centerTitle: true,
           title: const Text(
-            "Add Product",
+            "Update Product",
             style: TextStyle(color: Colors.white),
           ),
         ),

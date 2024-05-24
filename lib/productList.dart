@@ -1,4 +1,5 @@
 import 'package:crudeapp/addProductScreen.dart';
+import 'package:crudeapp/updateProductScreen%20copy.dart';
 import 'package:flutter/material.dart';
 
 class productList extends StatefulWidget {
@@ -70,15 +71,47 @@ class _productListState extends State<productList> {
       trailing: Wrap(
         children: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const updateproduct(),
+                ),
+              );
+            },
             icon: const Icon(Icons.edit),
           ),
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              _showDeletConfamationDiolog();
+            },
             icon: const Icon(Icons.delete),
           ),
         ],
       ),
     );
+  }
+
+  void _showDeletConfamationDiolog() {
+    showDialog(
+        context: context,
+        builder: (context) {
+          return AlertDialog(
+            title: Text('Delet'),
+            content: Text('Are You Sure,You Want to Delet'),
+            actions: [
+              TextButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                child: Text("Cancel"),
+              ),
+              TextButton(
+                onPressed: () {},
+                child: Text("Yes"),
+              )
+            ],
+          );
+        });
   }
 }
